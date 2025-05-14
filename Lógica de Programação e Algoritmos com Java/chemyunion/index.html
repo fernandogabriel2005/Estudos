@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Produção - Painel de Controle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar"></aside>
+    <div style="flex: 1;">
+        <div class="cabecalho-oval">
+            <div class="foto-perfil">
+                <img src="/api/placeholder/80/80" alt="Foto de perfil do usuário">
+            </div>
+            <div class="info-usuario">
+                <h3>Nome do Usuário</h3>
+                <p>email@exemplo.com</p>
+                <p>ID: USR12345</p>
+            </div>
+            <div class="info-produto">
+                <p class="numero-ordem">Ordem #8734</p>
+                <h4>Nome do Produto</h4>
+            </div>
+        </div>
+        <div class="nav-container">
+            <div class="grid-botoes">
+                <div class="botao-oval ativo" onclick="selecionarBotao(this)" aria-label="Setup">SETUP</div>
+                <div class="botao-oval" onclick="selecionarBotao(this)" aria-label="Carregar">CARREGAR</div>
+                <div class="botao-oval" onclick="selecionarBotao(this)" aria-label="Processo">PROCESSO</div>
+                <div class="botao-oval" onclick="selecionarBotao(this)" aria-label="Montar Caixa">MONTAR CAIXA</div>
+                <div class="botao-oval" onclick="selecionarBotao(this)" aria-label="Limpeza">LIMPEZA</div>
+                <div class="botao-oval" onclick="selecionarBotao(this)" aria-label="Materiais">MATERIAIS</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function selecionarBotao(botao) {
+            document.querySelector('.botao-oval.ativo')?.classList.remove('ativo');
+            botao.classList.add('ativo');
+        }
+    </script>
+</body>
+</html>
